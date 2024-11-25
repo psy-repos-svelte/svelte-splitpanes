@@ -2,6 +2,77 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.9](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.8...v8.0.9) (2024-10-30)
+
+
+### Bug Fixes
+
+* support for svelte5 ([91b395f](https://github.com/orefalo/svelte-splitpanes/commit/91b395f179ec89679dd5e845f49dce94faa23462))
+
+## [8.0.8](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.7...v8.0.8) (2024-10-05)
+
+
+### Bug Fixes
+
+* a regression related to safe callbacks which could generate a 0 width upon certain race conditions ([af34b41](https://github.com/orefalo/svelte-splitpanes/commit/af34b41a9974cd7203d3a0be2cb567666fbcf124))
+
+## [8.0.7](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.6...v8.0.7) (2024-10-05)
+
+
+### Bug Fixes
+
+* better handling of empty attributes ([7c9c4ad](https://github.com/orefalo/svelte-splitpanes/commit/7c9c4add390f1025c68b13ee9a3e6fa1df706754))
+
+## [8.0.6](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.5...v8.0.6) (2024-09-24)
+
+
+### Bug Fixes
+
+* fix panel pushing bug introduct in 0.8.3 ([b4c71f8](https://github.com/orefalo/svelte-splitpanes/commit/b4c71f8a22c512d77eed0ad533f7b7989f69db61))
+
+## [8.0.5](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.4...v8.0.5) (2024-06-16)
+
+
+### Miscellaneous Chores
+
+* release 8.0.5 ([9f7ec2e](https://github.com/orefalo/svelte-splitpanes/commit/9f7ec2e317594b4079ccb39a5c1292fb3c705bba))
+
+## [8.0.4](https://github.com/orefalo/svelte-splitpanes/compare/v0.8.3...v8.0.4) (2024-06-16)
+
+
+### Miscellaneous Chores
+
+* release 8.0.4 ([fbd210a](https://github.com/orefalo/svelte-splitpanes/commit/fbd210a0a598f7c70c98f34fc51d7201fc7288b1))
+
+## [0.8.3](https://github.com/orefalo/svelte-splitpanes/compare/v0.8.2...v0.8.3) (2024-06-15)
+
+
+### Bug Fixes
+
+* events are now passive by default, remove preventDefaults() in the code ([1bc9045](https://github.com/orefalo/svelte-splitpanes/commit/1bc90455c558e40b174c2270d19ea0e4636d912e))
+
+## [0.8.2](https://github.com/orefalo/svelte-splitpanes/compare/v0.8.1...v0.8.2) (2024-06-10)
+
+
+### Miscellaneous Chores
+
+* release 0.8.1 ([14170b6](https://github.com/orefalo/svelte-splitpanes/commit/14170b6fe0c842f9016b26d1aaddc91fa3eae061))
+* release 0.8.2 ([19e6b20](https://github.com/orefalo/svelte-splitpanes/commit/19e6b207ad8a179d6c9a05c49d07a45c2ebb25c0))
+
+## [0.8.1](https://github.com/orefalo/svelte-splitpanes/compare/v0.8.1...v0.8.1) (2024-06-10)
+
+
+### Miscellaneous Chores
+
+* release 0.8.1 ([14170b6](https://github.com/orefalo/svelte-splitpanes/commit/14170b6fe0c842f9016b26d1aaddc91fa3eae061))
+
+## [0.8.1](https://github.com/orefalo/svelte-splitpanes/compare/v0.8.0...v0.8.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* now efficiently identify if client supports passive events, fixes [#74](https://github.com/orefalo/svelte-splitpanes/issues/74) ([f2d7ed1](https://github.com/orefalo/svelte-splitpanes/commit/f2d7ed1da856386287a2065d66c79f9fb63706c3))
+
 ## [0.8.0](https://github.com/orefalo/svelte-splitpanes/compare/v0.7.15...v0.8.0) (2023-07-03)
 
 

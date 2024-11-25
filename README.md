@@ -47,7 +47,7 @@ Special thanks to all contributors and in particular [Tal500](https://github.com
 
 | ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Latest ✔                                                                                 | Latest ✔                                                                                    | Latest ✔                                                                                 | Latest ✔                                                                              | Latest ✔                                                                           | 11 ✔                                                                                                                         |
+| Latest ✔                                                                                | Latest ✔                                                                                   | Latest ✔                                                                                | Latest ✔                                                                             | Latest ✔                                                                          | 11 ✔                                                                                                                        |
 
 ## Star History
 
@@ -68,19 +68,27 @@ $ npm i svelte-splitpanes
 
 ```svelte
 <script>
-	import { Pane, Splitpanes } from 'svelte-splitpanes';
+  import { Pane, Splitpanes } from 'svelte-splitpanes';
 </script>
 
 <Splitpanes style="height: 400px">
-	<Pane minSize={20}>1<br /><em class="specs">I have a min width of 20%</em></Pane>
-	<Pane>
-		<Splitpanes horizontal={true}>
-			<Pane minSize={15}>2<br /><em class="specs">I have a min height of 15%</em></Pane>
-			<Pane>3</Pane>
-			<Pane>4</Pane>
-		</Splitpanes>
-	</Pane>
-	<Pane>5</Pane>
+  <Pane minSize={20}>
+    1
+    <br />
+    <em class="specs">I have a min width of 20%</em>
+  </Pane>
+  <Pane>
+    <Splitpanes horizontal={true}>
+      <Pane minSize={15}>
+        2
+        <br />
+        <em class="specs">I have a min height of 15%</em>
+      </Pane>
+      <Pane>3</Pane>
+      <Pane>4</Pane>
+    </Splitpanes>
+  </Pane>
+  <Pane>5</Pane>
 </Splitpanes>
 ```
 
@@ -117,35 +125,35 @@ The component can be further styled after the props have been defined by overrid
 /* The following classes can be used to style the splitter, see demos*/
 
 .splitpanes {
-	background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .splitpanes__splitter {
-	background-color: #ccc;
-	position: relative;
+  background-color: #ccc;
+  position: relative;
 }
 .splitpanes__splitter:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	transition: opacity 0.4s;
-	background-color: rgba(255, 0, 0, 0.3);
-	opacity: 0;
-	z-index: 1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.4s;
+  background-color: rgba(255, 0, 0, 0.3);
+  opacity: 0;
+  z-index: 1;
 }
 .splitpanes__splitter:hover:before {
-	opacity: 1;
+  opacity: 1;
 }
 .splitpanes--vertical > .splitpanes__splitter:before {
-	left: -30px;
-	right: -30px;
-	height: 100%;
+  left: -30px;
+  right: -30px;
+  height: 100%;
 }
 .splitpanes--horizontal > .splitpanes__splitter:before {
-	top: -30px;
-	bottom: -30px;
-	width: 100%;
+  top: -30px;
+  bottom: -30px;
+  width: 100%;
 }
 ```
 
@@ -168,23 +176,22 @@ Events are easy to trap
 
 ```svelte
 <script>
-	import { Splitpanes } from 'svelte-splitpanes';
+  import { Splitpanes } from 'svelte-splitpanes';
 
-	function handleMessage(event) {
-		console.log(JSON.stringify(event));
-	}
+  function handleMessage(event) {
+    console.log(JSON.stringify(event));
+  }
 </script>
 
 <Splitpanes
-	on:ready={handleMessage}
-	on:resize={handleMessage}
-	on:resized={handleMessage}
-	on:pane-click={handleMessage}
-	on:pane-maximize={handleMessage}
-	on:pane-add={handleMessage}
-	on:pane-remove={handleMessage}
-	on:splitter-click={handleMessage}
-/>
+  on:ready={handleMessage}
+  on:resize={handleMessage}
+  on:resized={handleMessage}
+  on:pane-click={handleMessage}
+  on:pane-maximize={handleMessage}
+  on:pane-add={handleMessage}
+  on:pane-remove={handleMessage}
+  on:splitter-click={handleMessage} />
 ```
 
 ## Contributing
@@ -206,17 +213,17 @@ To build the docs for production-ready version, you need to run `pnpm build`, an
 
 ### Developing
 
-After setting (or update) the environment (discussed in the previous section), you may also excecute SvelteKit in development mode by running `pnpm dev`. This will open a Vite server that automatically changes the result in the browser when the code is updated (hot reload).
+After setting (or update) the environment (discussed in the previous section), you may also excecute SvelteKit in development mode by running `pnpm dev`. This will open a Vite server that automatically changes the result in the browser when the code is updated.
 
 ### Commiting changes
 
-We have very precise rules over how our git commit messages are formatted. This leads to **more readable messages** that are easy to follow when looking through the **project history**. We use the git messages to **auto-generate the change log**.
+- run `pnpm commit`
 
-The enforcement is made possible by the enablement of several tools which, when put together, enable strict goverance.
+We have very precise rules over how our git commit messages are formatted. This leads to **more readable messages** that are easy to follow when looking through the **project history**. We use the git messages to **auto-generate the change log**.
 
 Commits are accepted, as long as they comply to the _commit message format_ described below.
 
-We also require the code to be well-formatted and to pass linting(i.e. minimal ts&svelte checks, plus additional code styling rules). Don't worry, the code is automatically being formatted and verified every time you commit your changes. In addition, when you push your commits to Github(by a PR or directly to the repo), your code will be verfied again by Github Actions with even more checks.
+When you push your commits to Github (by a PR or directly to the repo), your code will be verfied again by Github Actions with code formatting and linting checks. be sure to properly use `pnpm format` and `pnpm lint`
 
 To ease the development and to enforce the process of formatting the code, perform checks and formatting the commit message, you're advised to commit using the following steps:
 
