@@ -1,9 +1,7 @@
 /**
  * Browser detection utility.
  *
- * Uses SvelteKit's native browser detection which is more reliable
- * and doesn't require external dependencies.
- *
- * @see https://kit.svelte.dev/docs/modules#$app-environment
+ * Uses a standard check rather than SvelteKit's $app/environment
+ * so the package works in non-SvelteKit environments.
  */
-export { browser } from '$app/environment';
+export const browser = typeof window !== 'undefined';
