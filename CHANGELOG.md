@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.15](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.14...v8.0.15) (2026-03-26)
+
+
+### Bug Fixes
+
+* replace "$app/environment" with standard browser detection ([1fbc5ec](https://github.com/orefalo/svelte-splitpanes/commit/1fbc5ecf09483b56fc5ddb58a8770779a9a35ecd))
+* replace `$app/environment` with standard browser detection ([89008ae](https://github.com/orefalo/svelte-splitpanes/commit/89008aef24263f636ad5d6230fb146ac75b0589e))
+
 ## [8.0.14](https://github.com/orefalo/svelte-splitpanes/compare/v8.0.13...v8.0.14) (2026-01-18)
 
 
